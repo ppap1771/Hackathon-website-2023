@@ -47,7 +47,8 @@
 //status_code_0 animation
 new TypeIt("#element", { 
   lifeLike: false, 
-  speed: 0 
+  speed: 0,
+  loop: true 
 })
 .type("s")
 .pause(135)
@@ -94,4 +95,28 @@ new TypeIt("#element", {
 .type("_")
 .pause(956)
 .type("0")
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
+.pause(350)
+.delete(1)
 .go();
