@@ -165,63 +165,66 @@
         </div>
       </div>
     </div>
+  </div>
 
     <!-- Tracks -->
-        <!-- Tracks -->
-        <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl mt-10 mx-3 xl:mx-10">
+    <div id="tracks" class="mt-10 mx-5 xl:mx-16">
+        <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl mt-10">
           $ ls -a <span class="text-white">TRACKS</span>.txt
         </h1>
-    
-        <div class="flex flex-wrap justify-center overflow-x-auto overflow-y-auto mt-4">
-          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 rounded-t-lg py-2 mb-0 px-4 m-1" onclick="openTab(event, 'medical')">Medical</button>
-          <button class="tablinks bg-gray-900 text-gray-400 hover:text-gray-100 rounded-t-lg py-2 mb-0 px-4 m-1" onclick="openTab(event, 'wildlife')">Wildlife</button>
-          <button class="tablinks bg-gray-900 text-gray-400 hover:text-gray-100 rounded-t-lg py-2 mb-0 px-4 m-1" onclick="openTab(event, 'enviroment')">Environment</button>
-          <button class="tablinks bg-gray-900 text-gray-400 hover:text-gray-100 rounded-t-lg py-2 mb-0 px-4 m-1" onclick="openTab(event, 'gender')">Gender Inclusivity</button>
-          <button class="tablinks bg-gray-900 text-gray-400 hover:text-gray-100 rounded-t-lg py-2 mb-0 px-4 m-1" onclick="openTab(event, 'education')">Education</button>
-          <button class="tablinks bg-gray-900 text-gray-400 hover:text-gray-100 rounded-t-lg py-2 mb-0 px-4 m-1" onclick="openTab(event, 'employment')">Employment</button>
-          <button class="tablinks bg-gray-900 text-gray-400 hover:text-gray-100 rounded-t-lg py-2 mb-0 px-4 m-1" onclick="openTab(event, 'fintech')">Fintech</button>
-          <button class="tablinks bg-gray-900 text-gray-400 hover:text-gray-100 rounded-t-lg py-2 mb-0 px-4 m-1" onclick="openTab(event, 'security')">Security</button>
+      <div class="tab-box mt-10">
+        <div class="flex flex-nowrap justify-center overflow-x-hidden overflow-y-hidden">
+          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 py-2 mb-0 px-4 w-40 h-20" onclick="openTab(event, 'medical', '#1e1e1e', '#ffff')" id="defaultOpen" autofocus>Medical</button>
+          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 py-2 mb-0 px-4 w-40 h-20" onclick="openTab(event, 'wildlife', '#1e1e1e', '#ffff')">Wildlife</button>
+          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 py-2 mb-0 px-4 w-40 h-20" onclick="openTab(event, 'enviroment', '#1e1e1e', '#ffff')">Environment</button>
+          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 py-2 mb-0 px-4 w-40 h-20" onclick="openTab(event, 'gender', '#1e1e1e', '#ffff')">Gender Inclusivity</button>
+          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 py-2 mb-0 px-4 w-40 h-20" onclick="openTab(event, 'education', '#1e1e1e', '#ffff')">Education</button>
+          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 py-2 mb-0 px-4 w-40 h-20" onclick="openTab(event, 'employment', '#1e1e1e', '#ffff')">Employment</button>
+          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 py-2 mb-0 px-4 w-40 h-20" onclick="openTab(event, 'fintech', '#1e1e1e', '#ffff')">Fintech</button>
+          <button class="tablinks bg-gray-500 text-gray-400 hover:text-gray-100 py-2 mb-0 px-4 w-40 h-20" onclick="openTab(event, 'security', '#1e1e1e', '#ffff')">Security</button>
         </div>
         
-        <div id="medical" class="tabcontent bg-gray-800 text-gray-100 mt-0 p-4 m-10">
-          <h3 class="text-2xl font-bold mb-2">Medical</h3>
+        <div id="medical" class="tabcontent bg-gray-800 text-gray-100 mt-4 p-4 ml-10 mb-10" tabindex="0">
+          <h3 class="text-3xl font-bold mb-2">Medical</h3>
           <p>In this track, participants work on developing software solutions related to healthcare and medicine. They might build applications that help patients manage their health, or tools that assist healthcare providers in diagnosing and treating patients.</p>
         </div>
         
-        <div id="wildlife" class="tabcontent bg-gray-800 text-gray-100 mt-0 p-4 m-10">
-          <h3 class="text-2xl font-bold mb-2">Wildlife</h3>
+        <div id="wildlife" class="tabcontent bg-gray-800 text-gray-100 mt-4 p-4 ml-10 mb-10">
+          <h3 class="text-3xl font-bold mb-2">Wildlife</h3>
           <p>The wildlife track encourages participants to build software solutions that support wildlife conservation and the preservation of biodiversity. Participants might develop applications that help track wildlife populations, monitor habitats, prevent illegal wildlife trade, or even provide early warning systems for natural calamities such as forest fires or floods that can significantly impact wildlife and their habitats. The aim is to leverage technology to mitigate the effects of such natural disasters and protect wildlife from harm.</p>
         </div>
         
-        <div id="enviroment" class="tabcontent bg-gray-800 text-gray-100 mt-0 p-4 m-10">
-          <h3 class="text-2xl font-bold mb-2">Environment</h3>
+        <div id="enviroment" class="tabcontent bg-gray-800 text-gray-100 mt-4 p-4 ml-10 mb-10">
+          <h3 class="text-3xl font-bold mb-2">Environment</h3>
           <p>This track focuses on building software solutions that promote sustainability and protect the environment. Participants might create applications that help reduce waste, conserve energy, monitor the health of ecosystems, or streamline recycling processes. The possibilities are endless, and the goal is to develop innovative solutions that contribute to a cleaner and more sustainable future.</p>
         </div>
     
-        <div id="gender" class="tabcontent bg-gray-800 text-gray-100 mt-0 p-4 m-10">
-          <h3 class="text-2xl font-bold mb-2">Gender Inclusivity</h3>
+        <div id="gender" class="tabcontent bg-gray-800 text-gray-100 mt-4 p-4 ml-10 mb-10">
+          <h3 class="text-3xl font-bold mb-2">Gender Inclusivity</h3>
           <p>The Gender Inclusivity Track at Status Code 0 focuses on building software solutions that promote gender equality and inclusiveness, addressing various issues affecting women and girls. Participants are encouraged to create applications that combat gender-based violence, improve access to healthcare, and promote equal opportunities for women in the workplace. Furthermore, the track encourages participants to build solutions that support the LGBTQIA+ community and non-binary individuals. This includes creating applications that address discrimination, promote equal rights, and provide support for their mental health and overall well-being. The goal is to leverage technology to create a more equitable and inclusive society, free from all forms of discrimination and bias.</p>
         </div>
     
-        <div id="education" class="tabcontent bg-gray-800 text-gray-100 mt-0 p-4 m-10">
-          <h3 class="text-2xl font-bold mb-2">Education</h3>
+        <div id="education" class="tabcontent bg-gray-800 text-gray-100 mt-4 p-4 ml-10 mb-10">
+          <h3 class="text-3xl font-bold mb-2">Education</h3>
           <p>The education track encourages participants to build software solutions that enhance the quality of education. Participants might develop applications that provide personalized learning experiences, improve access to education for disadvantaged communities, or help teachers and students collaborate more effectively.</p>
         </div>
     
-        <div id="employment" class="tabcontent bg-gray-800 text-gray-100 mt-0 p-4 m-10">
-          <h3 class="text-2xl font-bold mb-2">Employment</h3>
+        <div id="employment" class="tabcontent bg-gray-800 text-gray-100 mt-4 p-4 ml-10 mb-10">
+          <h3 class="text-3xl font-bold mb-2">Employment</h3>
           <p>This track focuses on building software solutions that address employment challenges. Participants might create applications that help job seekers find employment, or tools that assist employers in finding the right candidates for their open positions.</p>
         </div>
     
-        <div id="fintech" class="tabcontent bg-gray-800 text-gray-100 mt-0 p-4 m-10">
-          <h3 class="text-2xl font-bold mb-2">Fintech</h3>
+        <div id="fintech" class="tabcontent bg-gray-800 text-gray-100 mt-4 p-4 ml-10 mb-10">
+          <h3 class="text-3xl font-bold mb-2">Fintech</h3>
           <p>The fintech track encourages participants to build software solutions that support financial innovation and inclusion. Participants might develop applications that make financial services more accessible, improve financial literacy, or support financial inclusion for underbanked communities.</p>
         </div>
     
-        <div id="security" class="tabcontent bg-gray-800 text-gray-100 mt-0 p-4 m-10">
-          <h3 class="text-2xl font-bold mb-2">Security</h3>
+        <div id="security" class="tabcontent bg-gray-800 text-gray-100 mt-4 p-4 ml-10 mb-10">
+          <h3 class="text-3xl font-bold mb-2">Security</h3>
           <p>This track focuses on building software solutions that improve cybersecurity. Participants might develop applications that detect and prevent cyber threats, or tools that help organizations protect their data and networks.</p>
         </div>
+      </div>
+    </div>
 
     <div class="mx-5 md:mx-10 mt-5 md:mt-10">
       <div class="hidden md:justify-center md:items-center">
@@ -230,10 +233,9 @@
           src="../assets/flyingComputer.gif"
           alt="shape pattern"
         />
-
       </div>
     </div>
-  </div>
+
   <div id="prize" class="mx-5 md:mx-10 mt-5 md:mt-10">
     <div class="hidden md:justify-center md:items-center">
       <img class="h-[8rem] md:h-[20rem]" src="../assets/flyingComputer.gif" alt="shape pattern" />
