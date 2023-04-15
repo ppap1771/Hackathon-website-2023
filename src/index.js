@@ -1,3 +1,40 @@
+//toggle start
+const collection = document.getElementsByClassName("example");
+for (let i = 0; i < collection.length; i++) {
+  collection[i].setAttribute("hidden", "hidden")
+}
+// collapsibles.setAttribute("hidden", "hidden")
+
+function Menu(e) {
+  let list = document.querySelector("ul");
+  e.name === "menu"
+    ? ((e.name = "close"),
+      list.classList.add("top-[80px]"),
+      list.classList.add("opacity-100"))
+    : ((e.name = "menu"),
+      list.classList.remove("top-[80px]"),
+      list.classList.remove("opacity-100"));
+}
+
+function Toggle(e) {
+  let element = e.parentElement.nextElementSibling;
+  let hidden = element.getAttribute("hidden");
+  console.log(element)
+
+  if (hidden) {
+    element.removeAttribute("hidden");
+    e.innerText = "[-]";
+  } else {
+    element.setAttribute("hidden", "hidden");
+    e.innerText = "[+]";
+  }
+}
+
+//toggle end
+
+
+const loader = document.getElementById("preloader");
+
 (function () {
   const second = 1000,
     minute = second * 60,
@@ -35,7 +72,7 @@
 
         //do something later when date is reached
         if (distance < 0) {
-          document.getElementById("headline").innerText = "It's my birthday!";
+          document.getElementById("headline").innerText = "Status Code 0 Is Onnnn!";
           document.getElementById("countdown").style.display = "none";
           document.getElementById("content").style.display = "block";
           clearInterval(x);
@@ -96,49 +133,25 @@ new TypeIt("#element", {
 .type("0")
 .go();
 
-
-// var collapsible = document.getElementsByClassName("faq-collapsible");
-
-// for (var i = 0; i < collapsible.length; i++) {
-//   collapsible[i].onclick = function () {
-//     this.classList.toggle("active");
-//     var content = this.nextElementSibling;
-//     if (content.style.maxHeight) {
-//       content.style.maxHeight = null;
-//     } else {
-//       content.style.maxHeight = content.scrollHeight + "em";
-//     }
-//   };
-
-  
-// }
-
-function openTab(evt, tabName, bgColor, color) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    console.log("hello");
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-    tablinks[i].style.backgroundColor = " ";
-    tablinks[i].style.color = " ";
-
-    console.log("hello2");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-  evt.style.backgroundColor = bgColor;
-  evt.style.color = color;
+//blinking animation
+const blinkingAnimation=()=>{
+  new TypeIt("#blinking", { 
+    lifeLike: false, 
+    speed: 0 
+  })
+  .type(".")
+  .pause(435)
+  .type(".")
+  .pause(441)
+  .type(".")
+  .pause(438)
+  .go();
 }
+blinkingAnimation();
+//preloader
 
-document.getElementById("defaultOpen").click();
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
+
+//toggle div

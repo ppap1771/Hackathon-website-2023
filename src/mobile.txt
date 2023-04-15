@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Status Code 0 | IIIT Kalyani</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-[#1E1E1E]">
+    <div class="mx-14 mt-20 px-3 py-10 bg-[#555555]<body class="bg-[#1E1E1E]  scroll-smooth">">
+
+      <div id="accordionExample ">
+        <div
+        class=""
+        >
+        <h2 class="mb-0" id="headingOne">
+          <button
+            class="group relative text-center flex w-full items-center justify-center px-5 py-4 bg-white text-[#1B1B1B] transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none  [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+            type="button"
+            data-te-collapse-init
+            data-te-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+          Medical
+        </button>
+      </h2>
+      <div
+      id="collapseOne"
+          class="!visible"
+          data-te-collapse-item
+          data-te-collapse-show
+          aria-labelledby="headingOne"
+          data-te-parent="#accordionExample"
+          >
+          <div class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg">
+            In this track, participants work on developing software solutions related to healthcare and medicine. They might build applications that help patients manage their health, or tools that assist healthcare providers in diagnosing and treating patients.
+          </div>
+        </div>
+      </div>
+      <div
+      class="mt-2"
+      >
+        <h2 class="mb-0" id="headingTwo">
+          <button
+          class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left  text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none  [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+          type="button"
+          data-te-collapse-init
+          data-te-collapse-collapsed
+          data-te-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+          >
+          Wildlife
+          
+        </button>
+      </h2>
+      <div
+      id="collapseTwo"
+      class="!visible hidden"
+      data-te-collapse-item
+      aria-labelledby="headingTwo"
+      data-te-parent="#accordionExample"
+      >
+      <div class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg">
+        The wildlife track encourages participants to build software solutions that support wildlife conservation and the preservation of biodiversity. Participants might develop applications that help track wildlife populations, monitor habitats, prevent illegal wildlife trade, or even provide early warning systems for natural calamities such as forest fires or floods that can significantly impact wildlife and their habitats. The aim is to leverage technology to mitigate the effects of such natural disasters and protect wildlife from harm.
+      </div>
+    </div>
+  </div>
+  <div
+  class="mt-2"
+  >
+  <h2 class="accordion-header mb-0" id="headingThree">
+    <button
+            class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left  text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none   [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+            type="button"
+            data-te-collapse-init
+            data-te-collapse-collapsed
+            data-te-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+            >
+            Environment
+            
+          </button>
+        </h2>
+        <div
+        id="collapseThree"
+        class="!visible hidden"
+        data-te-collapse-item
+        aria-labelledby="headingFour"
+        data-te-parent="#accordionExample"
+        >
+        <div class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg">
+          This track focuses on building software solutions that promote sustainability and protect the environment. Participants might create applications that help reduce waste, conserve energy, monitor the health of ecosystems, or streamline recycling processes. The possibilities are endless, and the goal is to develop innovative solutions that contribute to a cleaner and more sustainable future.
+        </div>
+      </div>
+    </div>
+    <div
+    class="mt-2  "
+    >
+    <h2 class="accordion-header mb-0" id="headingFour">
+      <button
+      class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left  text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none   [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9]  font-bold text-4xl"
+      type="button"
+      data-te-collapse-init
+      data-te-collapse-collapsed
+      data-te-target="#collapseFour"
+      aria-expanded="false"
+      aria-controls="collapseFour"
+      >
+      Four
+      
+    </button>
+  </h2>
+  <div
+  id="collapseFour"
+  class="!visible hidden"
+  data-te-collapse-item
+  aria-labelledby="headingFour"
+  data-te-parent="#accordionExample"
+        >
+        <div class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg">
+          This track focuses on building software solutions that promote sustainability and protect the environment. Participants might create applications that help reduce waste, conserve energy, monitor the health of ecosystems, or streamline recycling processes. The possibilities are endless, and the goal is to develop innovative solutions that contribute to a cleaner and more sustainable future.
+        </div>
+      </div>
+    </div>
+    <div
+    class=" border border-x-0 mt-2 border-t-0 border-neutral-200 bg-white "
+    >
+    <h2 class="accordion-header mb-0" id="headingFive">
+      <button
+      class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none   [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9]  font-bold text-4xl"
+      type="button"
+      data-te-collapse-init
+      data-te-collapse-collapsed
+      data-te-target="#collapseFive"
+      aria-expanded="false"
+      aria-controls="collapseFive"
+      >
+      Five
+      
+    </button>
+  </h2>
+  <div
+  id="collapseFive"
+  class="!visible hidden"
+  data-te-collapse-item
+  aria-labelledby="headingFive"
+  data-te-parent="#accordionExample"
+  >
+  <div class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg">
+    This track focuses on building software solutions that promote sustainability and protect the environment. Participants might create applications that help reduce waste, conserve energy, monitor the health of ecosystems, or streamline recycling processes. The possibilities are endless, and the goal is to develop innovative solutions that contribute to a cleaner and more sustainable future.
+  </div>
+</div>
+</div>
+<div
+class="mt-2"
+>
+<h2 class="accordion-header mb-0" id="headingSix">
+  <button
+  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left  text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none   [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9]  font-bold text-4xl"
+  type="button"
+  data-te-collapse-init
+  data-te-collapse-collapsed
+  data-te-target="#collapseSix"
+  aria-expanded="false"
+  aria-controls="collapseSix"
+  >
+  Six
+  
+</button>
+        </h2>
+        <div
+        id="collapseSix"
+        class="!visible hidden"
+        data-te-collapse-item
+        aria-labelledby="headingSix"
+        data-te-parent="#accordionExample"
+        >
+        <div class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg">
+          This track focuses on building software solutions that promote sustainability and protect the environment. Participants might create applications that help reduce waste, conserve energy, monitor the health of ecosystems, or streamline recycling processes. The possibilities are endless, and the goal is to develop innovative solutions that contribute to a cleaner and more sustainable future.
+        </div>
+      </div>
+    </div>
+    <div
+    class="mt-2"
+    >
+    <h2 class="accordion-header mb-0" id="headingSeven">
+      <button
+      class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left  text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none   [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9]  font-bold text-4xl"
+      type="button"
+      data-te-collapse-init
+      data-te-collapse-collapsed
+      data-te-target="#collapseSeven"
+      aria-expanded="false"
+      aria-controls="collapseSeven"
+      >
+      Seven
+      
+    </button>
+  </h2>
+  <div
+  id="collapseSeven"
+  class="!visible hidden"
+  data-te-collapse-item
+  aria-labelledby="headingSeven"
+  data-te-parent="#accordionExample"
+  >
+  <div class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg">
+    This track focuses on building software solutions that promote sustainability and protect the environment. Participants might create applications that help reduce waste, conserve energy, monitor the health of ecosystems, or streamline recycling processes. The possibilities are endless, and the goal is to develop innovative solutions that contribute to a cleaner and more sustainable future.
+  </div>
+</div>
+</div>
+<div
+class=" mt-2"
+>
+<h2 class="accordion-header mb-0" id="headingEight">
+  <button
+  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none   [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9]  font-bold text-4xl"
+  type="button"
+  data-te-collapse-init
+  data-te-collapse-collapsed
+            data-te-target="#collapseEight"
+            aria-expanded="false"
+            aria-controls="collapseEight"
+            >
+            Eight
+            
+          </button>
+        </h2>
+        <div
+        id="collapseEight"
+        class="!visible hidden"
+        data-te-collapse-item
+        aria-labelledby="headingEight"
+        data-te-parent="#accordionExample"
+        >
+        <div class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg">
+          This track focuses on building software solutions that promote sustainability and protect the environment. Participants might create applications that help reduce waste, conserve energy, monitor the health of ecosystems, or streamline recycling processes. The possibilities are endless, and the goal is to develop innovative solutions that contribute to a cleaner and more sustainable future.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+</body>
+</html>
