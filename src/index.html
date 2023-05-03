@@ -1,1160 +1,1250 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/dist/output.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
-  <script  src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <link rel="icon" href="../assets/favicon_io/favicon.ico" />
-  <title>Status Code 0 | IIIT Kalyani</title>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
-/>
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        fontFamily: {
-          sans: ["Roboto", "sans-serif"],
-          body: ["Roboto", "sans-serif"],
-          mono: ["ui-monospace", "monospace"],
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <link rel="icon" href="../assets/favicon_io/favicon.ico" />
+    <title>Status Code 0 | IIIT Kalyani</title>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
         },
-      },
-      corePlugins: {
-        preflight: false,
-      },
-    };
-  </script>
-</head>
-
-<body class="bg-[#1E1E1E]  scroll-smooth">
-  <div id="preloader">
-    <h1 id="loadingText">Status Code 0 loading <span id="blinking"></span>
-  </h1>
-  </div>
-  <nav class="py-5 bg-[#1E1E1E] xl:flex xl:items-center  xl:justify-between z-50 xl:mx-16 mx-5">
-    <div class="flex justify-between items-center">
-      <span class="text-3xl md:text-5xl xl:text-5xl cursor-pointer">
-        <h1>
-          > STATUS CODE
-          <span style="color: #f21212">0</span>
-        </h1><body class="bg-[#1E1E1E]  scroll-smooth"></body>
-      </span>
-
-      <span id="check" class="cursor-pointer mx-2 xl:hidden block">
-        <ion-icon class="text-3xl md:text-5xl" name="menu" onclick="Menu(this)"></ion-icon>
-      </span>
-    </div>
-    <ul
-      class="xl:flex xl:items-center xl:z-auto xl:static absolute w-full left-0 xl:w-auto xl:py-0 py-4 xl:pl-0 pl-7 xl:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-300 bg-[#1E1E1E] text-[#BABABA]">
-      <li class="mx-4 my-6 xl:my-0 hover:text-white">
-        <a href="#schedule" class="text-3xl 2xl:text-4xl">SCHEDULE</a>
-      </li>
-      <li class="mx-4 my-6 xl:my-0 hover:text-white">
-        <a href="#tracks" class="text-3xl 2xl:text-4xl">TRACKS</a>
-      </li>
-      <li class="mx-4 my-6 xl:my-0 hover:text-white">
-        <a href="#prize" class="text-3xl 2xl:text-4xl">PRIZE</a>
-      </li>
-      <li class="mx-4 my-6 xl:my-0 hover:text-white">
-        <a href="#sponsers" class="text-3xl 2xl:text-4xl">SPONSORS</a>
-      </li>
-      <li class="mx-4 my-6 xl:my-0 hover:text-white">
-        <a href="#rules" class="text-3xl 2xl:text-4xl">RULES & FAQ</a>
-      </li>
-      <button class="text-3xl md:text-4xl duration-500 px-2 py-1 mx-4 hover:bg-white hover:text-black" style="color: #f21212;">
-        REGISTER
-      </button>
-    </ul>
-  </nav>
-
-  <div class="hero flex justify-between items-center md:gap-[5rem] lg:gap-[10rem] 2xl:gap-[30rem] mx-5 xl:mx-16  py-16">
-    <div class="hero-text">
-      <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl tracking-wider">
-        $ man <span class="text-white" id="element"></span>
-
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#1E1E1E]">
+    <div id="preloader">
+      <h1 id="loadingText">
+        Status Code 0 loading <span id="blinking"></span>
       </h1>
-      <p class="text-[#D9D9D9] lg:text-base xl:text-2xl mt-10 w-full md:w-[100%] 2xl:w-[120%]">
-        Status Code 0 is an exciting 36-hour hackathon event that brings
-        together talented software developers to showcase their creativity and
-        build innovative projects. Participants will have the opportunity to
-        compete in a variety of categories or tracks, demonstrating their
-        skills and ingenuity while collaborating with like-minded individuals.
-        This event is the perfect opportunity for developers to challenge
-        themselves, learn new skills, and create amazing products that have
-        the potential to make a significant impact in the industry.
-      </p>
+    </div>
 
-      <div class="container my-12 flex items-center justify-center" style="color: #f21212;">
-        <h1 class="text-5xl hidden" id="headline">
-          Countdown to the main event
+    <nav
+      class="py-5 bg-[#1E1E1E] xl:flex xl:items-center xl:justify-between z-50 xl:mx-16 mx-5"
+    >
+      <div class="flex justify-between items-center">
+        <span class="cursor-pointer">
+          <h1 class="m-0 text-3xl md:text-5xl xl:text-5xl">
+            > STATUS CODE
+            <span style="color: #f21212">0</span>
+          </h1>
+        </span>
+
+        <span id="check" class="cursor-pointer mx-2 xl:hidden block">
+          <ion-icon
+            class="text-3xl md:text-5xl"
+            name="menu"
+            onclick="Menu(this)"
+          ></ion-icon>
+        </span>
+      </div>
+      <ul
+        class="xl:flex xl:items-center z-50 xl:z-auto xl:static absolute w-full left-0 xl:w-auto xl:py-0 py-4 xl:pl-0 pl-7 opacity-0 xl:opacity-100 top-[-400px] transition-all ease-in duration-500 bg-[#1E1E1E] text-[#BABABA]"
+      >
+        <li class="mx-4 my-6 xl:my-0 hover:text-white">
+          <a href="#schedule" class="text-3xl 2xl:text-4xl">SCHEDULE</a>
+        </li>
+        <li class="mx-4 my-6 xl:my-0 hover:text-white">
+          <a href="#tracks" class="text-3xl 2xl:text-4xl">TRACKS</a>
+        </li>
+        <li class="mx-4 my-6 xl:my-0 hover:text-white">
+          <a href="#prize" class="text-3xl 2xl:text-4xl">PRIZE</a>
+        </li>
+        <li class="mx-4 my-6 xl:my-0 hover:text-white">
+          <a href="#sponsers" class="text-3xl 2xl:text-4xl">SPONSORS</a>
+        </li>
+        <li class="mx-4 my-6 xl:my-0 hover:text-white">
+          <a href="#faq" class="text-3xl 2xl:text-4xl">RULES & FAQ</a>
+        </li>
+        <div
+          class="apply-button"
+          data-hackathon-slug="statuscode0"
+          data-button-theme="dark"
+          style="height: 44px; width: 312px"
+        ></div>
+      </ul>
+    </nav>
+
+    <div
+      class="hero flex justify-between items-center md:gap-[5rem] lg:gap-[10rem] 2xl:gap-[30rem] mx-5 xl:mx-16 py-24"
+    >
+      <div class="hero-text">
+        <h1
+          class="text-[#9E9E9E] m-0 tracking-wider text-2xl md:text-4xl xl:text-5xl"
+        >
+          $ man <span class="text-white z-10" id="element"></span>
         </h1>
-        <div id="countdown ">
-          <ul class="flex justify-around text-4xl md:text-4xl lg:text-5xl xl:text-6xl">
-            <li><span id="days"></span></li>
-            <li><span id=""></span>:</li>
-            <li><span id="hours"></span></li>
-            <li><span id=""></span>:</li>
-            <li><span id="minutes"></span></li>
-            <li><span id=""></span>:</li>
-            <li><span id="seconds"></span></li>
-          </ul>
-          <ul class="flex gap-3 justify-evenly text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-[#D9D9D9]">
-            <li><span id=""></span>days</li>
-            <li><span id=""></span>:</li>
-            <li><span class="" id=""></span> hrs</li>
-            <li><span id=""></span>:</li>
-            <li><span id=""></span> min</li>
-            <li><span id=""></span>:</li>
-            <li><span id=""></span>sec</li>
-          </ul>
+        <p
+          class="text-[#D9D9D9] lg:text-base xl:text-2xl mt-10 w-full md:w-[100%] 2xl:w-[120%]"
+        >
+          Status Code 0 is an exciting 36-hour hackathon event that brings
+          together talented software developers to showcase their creativity and
+          build innovative projects. Participants will have the opportunity to
+          compete in a variety of categories or tracks, demonstrating their
+          skills and ingenuity while collaborating with like-minded individuals.
+          This event is the perfect opportunity for developers to challenge
+          themselves, learn new skills, and create amazing products that have
+          the potential to make a significant impact in the industry.
+        </p>
+
+        <div
+          class="container my-12 flex items-center justify-center"
+          style="color: #f21212"
+        >
+          <h1 class="text-5xl hidden m-0 text-white" id="headline">
+            Countdown to the main event
+          </h1>
+          <div id="countdown ">
+            <ul
+              class="flex justify-around text-4xl md:text-4xl lg:text-5xl xl:text-6xl"
+            >
+              <li><span id="days"></span></li>
+              <li><span id=""></span>:</li>
+              <li><span id="hours"></span></li>
+              <li><span id=""></span>:</li>
+              <li><span id="minutes"></span></li>
+              <li><span id=""></span>:</li>
+              <li><span id="seconds"></span></li>
+            </ul>
+            <ul
+              class="flex gap-3 justify-evenly text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-[#D9D9D9]"
+            >
+              <li><span id=""></span>days</li>
+              <li><span id=""></span>:</li>
+              <li><span class="" id=""></span> hrs</li>
+              <li><span id=""></span>:</li>
+              <li><span id=""></span> min</li>
+              <li><span id=""></span>:</li>
+              <li><span id=""></span>sec</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img
+        class="md:h-[30vh] xl:h-[40vh] 2xl:h-[60vh] hidden md:block"
+        style="margin: 0 5em 10em 0"
+        src="../assets/mascot.gif"
+        alt=""
+      />
+    </div>
+
+    <div id="schedule" class="mt-10 mx-5 xl:mx-16">
+      <h1 class="text-[#9E9E9E] m-0 text-2xl md:text-4xl xl:text-5xl">
+        $ cat <span class="text-white">SCHEDULE</span>.txt
+      </h1>
+      <div class="flex flex-col xl:flex-row xl:gap-[20rem] 2xl:gap-[30rem]">
+        <div class="relative mb-[10rem] w-[90vw] xl:w-[30vw]">
+          <img
+            class="mt-5 h-[30rem] w-auto relative hidden xl:block"
+            src="../assets/ladder.png"
+            alt=""
+          />
+          <img
+            class="mt-5 h-[60rem] w-auto relative xl:hidden"
+            src="../assets/laddermobile.png"
+            alt=""
+          />
+          <div class="absolute top-[5rem] xl:top-[4.5rem] left-[6rem]">
+            <h1 class="text-4xl xl:text-4xl m-0 text-[#CCCC6C]">
+              Registration Begin
+            </h1>
+            <p class="xl:text-2xl">15 April 2023, 0000 hrs</p>
+          </div>
+          <div class="absolute top-[12.8rem] left-[6rem]">
+            <h1 class="text-4xl xl:text-4xl m-0 text-[#CCCC6C]">
+              Registration Closes
+            </h1>
+            <p class="xl:text-2xl">30 April 2023, 0000 hrs</p>
+          </div>
+          <div class="absolute top-[20.5rem] xl:top-[21rem] left-[6rem]">
+            <h1 class="text-4xl xl:text-4xl m-0 text-[#6164AD]">
+              Opening Ceremony
+            </h1>
+            <p class="xl:text-2xl">6 May 2023, 0900 hrs</p>
+          </div>
+          <div class="absolute top-[28.7rem] xl:top-[29.3rem] left-[6rem]">
+            <h1 class="text-4xl xl:text-4xl m-0 text-[#CD3838]">
+              Speaker session
+            </h1>
+            <p class="xl:text-2xl">6 May 2023, 1600 hrs</p>
+          </div>
+        </div>
+        <div class="absolute xl:relative mb-[10rem] w-[90vw] xl:w-[30vw]">
+          <img
+            class="mt-5 h-[30rem] w-auto relative hidden xl:block"
+            src="../assets/ladder.png"
+            alt=""
+          />
+          <div class="absolute top-[36rem] left-[6rem] xl:top-[4.5rem]">
+            <h1 class="text-4xl xl:text-4xl m-0 text-[#50BE62]">
+              Mid Evaluation
+            </h1>
+            <p class="xl:text-2xl">7 May 2023 , 0000 hrs</p>
+          </div>
+          <div class="absolute top-[44rem] left-[6rem] xl:top-[12.8rem]">
+            <h1 class="text-4xl xl:text-4xl m-0 text-[#CD3838]">
+              Speaker Session
+            </h1>
+            <p class="xl:text-2xl">7 May 2023, 1000 hrs</p>
+          </div>
+          <div class="absolute top-[51.5rem] xl:top-[21rem] left-[6rem]">
+            <h1 class="text-4xl xl:text-4xl m-0 text-[#50BE62]">
+              Final Evaluation
+            </h1>
+            <p class="xl:text-2xl">7 May 2012, 1400 hrs</p>
+          </div>
+          <div class="absolute top-[59.5rem] xl:top-[29.3rem] left-[6rem]">
+            <h1 class="text-4xl xl:text-4xl m-0 text-[#6164AD]">
+              Closing Ceremony
+            </h1>
+            <p class="xl:text-2xl">7 May 2023 ,1600 hrs</p>
+          </div>
         </div>
       </div>
     </div>
-    <img class="md:h-[30vh] xl:h-[40vh] 2xl:h-[60vh] hidden md:block" style="margin: 0 5em 10em 0;" src="../assets/mascot.gif" alt="" />
-  </div>
 
-  <!--Schedule-->
-  <div id="schedule" class="mt-10 mx-5 xl:mx-16">
-    <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl">
-      $ cat <span class="text-white">SCHEDULE</span>.txt
-    </h1>
-    <div class="flex flex-col xl:flex-row xl:gap-[20rem] 2xl:gap-[30rem]">
-      <div class="relative mb-[10rem] w-[90vw] xl:w-[30vw]">
-        <img
-          class="mt-5 h-[30rem] w-auto relative hidden xl:block"
-          src="../assets/ladder.png"
-          alt=""
-        />
-        <img
-          class="mt-5 h-[60rem] w-auto relative xl:hidden"
-          src="../assets/laddermobile.png"
-          alt=""
-        />
-        <div class="absolute top-[2rem] xl:top-[2rem] left-[6rem]">
-          <h1 class="text-4xl xl:text-4xl text-[#CCCC6C]">Registration Begin</h1>
-          <p class="xl:text-2xl">15 April 2023, 0000 hrs</p>
-        </div>
-        <div class="absolute top-[10rem] left-[6rem]">
-          <h1 class="text-4xl xl:text-4xl text-[#CCCC6C]">Registration Closes</h1>
-          <p class="xl:text-2xl">30 April 2023, 0000 hrs</p>
-        </div>
-        <div class="absolute top-[20.5rem] xl:top-[18.5rem] left-[6rem]">
-          <h1 class="text-4xl xl:text-4xl text-[#CD3838]">Opening Ceremony</h1>
-          <p class="xl:text-2xl">6 May 2023, 0900 hrs</p>
-        </div>
-        <div class="absolute top-[28.7rem] xl:top-[26.3rem] left-[6rem]">
-          <h1 class="text-4xl xl:text-4xl text-[#50BE62]">Speaker session</h1>
-          <p class="xl:text-2xl">6 May 2023, 1600 hrs</p>
-        </div>
-      </div>
-      <div class="absolute xl:relative mb-[10rem] w-[90vw] xl:w-[30vw]">
-        <img
-          class="mt-5 h-[30rem] w-auto relative hidden xl:block"
-          src="../assets/ladder.png"
-          alt=""
-        />
-        <div class="absolute top-[36rem] left-[6rem] xl:top-[2rem]">
-          <h1 class="text-4xl xl:text-4xl text-[#6164AD]">Mid Evaluation</h1>
-          <p class="xl:text-2xl">7 May 2023 , 0000 hrs</p>
-        </div>
-        <div class="absolute top-[44rem] left-[6rem] xl:top-[10rem]">
-          <h1 class="text-4xl xl:text-4xl text-[#50BE62]">Speaker Session</h1>
-          <p class="xl:text-2xl">7 May 2023, 1000 hrs</p>
-        </div>
-        <div class="absolute top-[51.5rem] xl:top-[18.5rem] left-[6rem]">
-          <h1 class="text-4xl xl:text-4xl text-[#6164AD]">Final Evaluation</h1>
-          <p class="xl:text-2xl">7 May 2012, 1400 hrs</p>
-        </div>
-        <div class="absolute top-[59.5rem] xl:top-[26.3rem] left-[6rem]">
-          <h1 class="text-4xl xl:text-4xl text-[#CD3838]">Closing Ceremony</h1>
-          <p class="xl:text-2xl">7 May 2023 ,1600 hrs</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div id="tracks" class="mt-10 mx-5 xl:mx-16">
+      <h1 class="text-[#9E9E9E] m-0 text-2xl md:text-4xl xl:text-5xl">
+        $ ls -a <span class="text-white">TRACKS</span>.txt
+      </h1>
+      <div class="mx-10 my-20 bg-[#555555] pt-10 pb-2 px-2 hidden xl:block">
+        <ul
+          class="flex list-none flex-col flex-wrap pl-0 md:flex-row"
+          role="tablist"
+          data-te-nav-ref
+        >
+          <li role="presentation" class="flex-auto text-center">
+            <a
+              href="#pills-home01"
+              class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
+              id="pills-home-tab01"
+              data-te-toggle="pill"
+              data-te-target="#pills-home01"
+              data-te-nav-active
+              role="tab"
+              aria-controls="pills-home01"
+              aria-selected="true"
+              >Medical</a
+            >
+          </li>
+          <li role="profile" class="flex-auto text-center">
+            <a
+              href="#pills-profile01"
+              class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
+              id="pills-profile-tab01"
+              data-te-toggle="pill"
+              data-te-target="#pills-profile01"
+              role="tab"
+              aria-controls="pills-profile01"
+              aria-selected="false"
+              >Environment</a
+            >
+          </li>
+          <li role="contact" class="flex-auto text-center">
+            <a
+              href="#pills-contact01"
+              class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
+              id="pills-contact-tab01"
+              data-te-toggle="pill"
+              data-te-target="#pills-contact01"
+              role="tab"
+              aria-controls="pills-contact01"
+              aria-selected="false"
+              >Wildlife</a
+            >
+          </li>
+          <li role="contact" class="flex-auto text-center">
+            <a
+              href="#pills-04"
+              class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
+              id="pills-contact-tab01"
+              data-te-toggle="pill"
+              data-te-target="#pills-04"
+              role="tab"
+              aria-controls="pills-04"
+              aria-selected="false"
+              >Gender Inclusivity</a
+            >
+          </li>
+          <li role="contact" class="flex-auto text-center">
+            <a
+              href="#pills-05"
+              class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
+              id="pills-contact-tab01"
+              data-te-toggle="pill"
+              data-te-target="#pills-05"
+              role="tab"
+              aria-controls="pills-05"
+              aria-selected="false"
+              >Education</a
+            >
+          </li>
+          <li role="contact" class="flex-auto text-center">
+            <a
+              href="#pills-06"
+              class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
+              id="pills-contact-tab01"
+              data-te-toggle="pill"
+              data-te-target="#pills-06"
+              role="tab"
+              aria-controls="pills-06"
+              aria-selected="false"
+              >Employment</a
+            >
+          </li>
+          <li role="contact" class="flex-auto text-center">
+            <a
+              href="#pills-07"
+              class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
+              id="pills-contact-tab01"
+              data-te-toggle="pill"
+              data-te-target="#pills-07"
+              role="tab"
+              aria-controls="pills-07"
+              aria-selected="false"
+              >Fintech</a
+            >
+          </li>
+          <li role="contact" class="flex-auto text-center">
+            <a
+              href="#pills-08"
+              class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
+              id="pills-contact-tab01"
+              data-te-toggle="pill"
+              data-te-target="#pills-08"
+              role="tab"
+              aria-controls="pills-08"
+              aria-selected="false"
+              >Security</a
+            >
+          </li>
+        </ul>
 
-        <!-- Tracks -->
-        <!-- Tracks -->
-        <h1 id="tracks" class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl xl:mx-10 mx-5 md:mx-10 mt-5 md:mt-10">
-          $ ls -a <span class="text-white">TRACKS</span>.txt
-        </h1>
-        <div class="mx-10 my-20 bg-[#555555] pt-10 pb-2 px-2 hidden xl:block">
-          <ul
-            class="flex list-none flex-col flex-wrap pl-0 md:flex-row"
-            role="tablist"
-            data-te-nav-ref
+        <!--Pills content-->
+        <div class="mb-2">
+          <div
+            class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
+            id="pills-home01"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab01"
+            data-te-tab-active
           >
-            <li role="presentation" class="flex-auto text-center">
-              <a
-                href="#pills-home01"
-                class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
-                id="pills-home-tab01"
-                data-te-toggle="pill"
-                data-te-target="#pills-home01"
-                data-te-nav-active
-                role="tab"
-                aria-controls="pills-home01"
-                aria-selected="true"
-                >Medical</a
-              >
-            </li>
-            <li role="profile" class="flex-auto text-center">
-              <a
-                href="#pills-profile01"
-                class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
-                id="pills-profile-tab01"
-                data-te-toggle="pill"
-                data-te-target="#pills-profile01"
-                role="tab"
-                aria-controls="pills-profile01"
-                aria-selected="false"
-                >Environment</a
-              >
-            </li>
-            <li role="contact" class="flex-auto text-center">
-              <a
-                href="#pills-contact01"
-                class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
-                id="pills-contact-tab01"
-                data-te-toggle="pill"
-                data-te-target="#pills-contact01"
-                role="tab"
-                aria-controls="pills-contact01"
-                aria-selected="false"
-                >Wildlife</a
-              >
-            </li>
-            <li role="contact" class="flex-auto text-center">
-              <a
-                href="#pills-04"
-                class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
-                id="pills-contact-tab01"
-                data-te-toggle="pill"
-                data-te-target="#pills-04"
-                role="tab"
-                aria-controls="pills-04"
-                aria-selected="false"
-                >Gender Inclusivity</a
-              >
-            </li>
-            <li role="contact" class="flex-auto text-center">
-              <a
-                href="#pills-05"
-                class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
-                id="pills-contact-tab01"
-                data-te-toggle="pill"
-                data-te-target="#pills-05"
-                role="tab"
-                aria-controls="pills-05"
-                aria-selected="false"
-                >Education</a
-              >
-            </li>
-            <li role="contact" class="flex-auto text-center">
-              <a
-                href="#pills-06"
-                class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
-                id="pills-contact-tab01"
-                data-te-toggle="pill"
-                data-te-target="#pills-06"
-                role="tab"
-                aria-controls="pills-06"
-                aria-selected="false"
-                >Employment</a
-              >
-            </li>
-            <li role="contact" class="flex-auto text-center">
-              <a
-                href="#pills-07"
-                class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
-                id="pills-contact-tab01"
-                data-te-toggle="pill"
-                data-te-target="#pills-07"
-                role="tab"
-                aria-controls="pills-07"
-                aria-selected="false"
-                >Fintech</a
-              >
-            </li>
-            <li role="contact" class="flex-auto text-center">
-              <a
-                href="#pills-08"
-                class="block bg-[#9E9E9E] px-5 pb-3.5 pt-4 text-3xl font-medium uppercase leading-tight text-[#1E1E1E] data-[te-nav-active]:!bg-[#1E1E1E] data-[te-nav-active]:text-[#FFFFFF] md:mr-0"
-                id="pills-contact-tab01"
-                data-te-toggle="pill"
-                data-te-target="#pills-08"
-                role="tab"
-                aria-controls="pills-08"
-                aria-selected="false"
-                >Security</a
-              >
-            </li>
-          </ul>
-    
-          <!--Pills content-->
-          <div class="mb-2">
-            <div
-              class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
-              id="pills-home01"
-              role="tabpanel"
-              aria-labelledby="pills-home-tab01"
-              data-te-tab-active
-            >
-              In this track, participants work on developing software solutions
-              related to healthcare and medicine. They might build applications that
-              help patients manage their health, or tools that assist healthcare
-              providers in diagnosing and treating patients.
-            </div>
-            <div
-              class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
-              id="pills-profile01"
-              role="tabpanel"
-              aria-labelledby="pills-profile-tab01"
-            >
-              The wildlife track encourages participants to build software solutions
-              that support wildlife conservation and the preservation of
-              biodiversity. Participants might develop applications that help track
-              wildlife populations, monitor habitats, prevent illegal wildlife
-              trade, or even provide early warning systems for natural calamities
-              such as forest fires or floods that can significantly impact wildlife
-              and their habitats. The aim is to leverage technology to mitigate the
-              effects of such natural disasters and protect wildlife from harm.
-            </div>
-            <div
-              class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
-              id="pills-contact01"
-              role="tabpanel"
-              aria-labelledby="pills-contact-tab01"
-            >
-              This track focuses on building software solutions that promote
-              sustainability and protect the environment. Participants might create
-              applications that help reduce waste, conserve energy, monitor the
-              health of ecosystems, or streamline recycling processes. The
-              possibilities are endless, and the goal is to develop innovative
-              solutions that contribute to a cleaner and more sustainable future.
-            </div>
-            <div
-              class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
-              id="pills-04"
-              role="tabpanel"
-              aria-labelledby="pills-contact-tab01"
-            >
-              The Gender Inclusivity Track at Status Code 0 focuses on building
-              software solutions that promote gender equality and inclusiveness,
-              addressing various issues affecting women and girls. Participants are
-              encouraged to create applications that combat gender-based violence,
-              improve access to healthcare, and promote equal opportunities for
-              women in the workplace. Furthermore, the track encourages participants
-              to build solutions that support the LGBTQIA+ community and non-binary
-              individuals. This includes creating applications that address
-              discrimination, promote equal rights, and provide support for their
-              mental health and overall well-being. The goal is to leverage
-              technology to create a more equitable and inclusive society, free from
-              all forms of discrimination and bias.
-            </div>
-            <div
-              class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
-              id="pills-05"
-              role="tabpanel"
-              aria-labelledby="pills-contact-tab01"
-            >
-              The education track encourages participants to build software
-              solutions that enhance the quality of education. Participants might
-              develop applications that provide personalized learning experiences,
-              improve access to education for disadvantaged communities, or help
-              teachers and students collaborate more effectively.
-            </div>
-            <div
-              class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
-              id="pills-06"
-              role="tabpanel"
-              aria-labelledby="pills-contact-tab01"
-            >
-              This track focuses on building software solutions that address
-              employment challenges. Participants might create applications that
-              help job seekers find employment, or tools that assist employers in
-              finding the right candidates for their open positions.
-            </div>
-            <div
-              class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
-              id="pills-07"
-              role="tabpanel"
-              aria-labelledby="pills-contact-tab01"
-            >
-              The fintech track encourages participants to build software solutions
-              that support financial innovation and inclusion. Participants might
-              develop applications that make financial services more accessible,
-              improve financial literacy, or support financial inclusion for
-              underbanked communities.
-            </div>
-            <div
-              class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
-              id="pills-08"
-              role="tabpanel"
-              aria-labelledby="pills-contact-tab01"
-            >
-              This track focuses on building software solutions that improve
-              cybersecurity. Participants might develop applications that detect and
-              prevent cyber threats, or tools that help organizations protect their
-              data and networks.
-            </div>
+            In this track, participants work on developing software solutions
+            related to healthcare and medicine. They might build applications
+            that help patients manage their health, or tools that assist
+            healthcare providers in diagnosing and treating patients.
+          </div>
+          <div
+            class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
+            id="pills-profile01"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab01"
+          >
+            The wildlife track encourages participants to build software
+            solutions that support wildlife conservation and the preservation of
+            biodiversity. Participants might develop applications that help
+            track wildlife populations, monitor habitats, prevent illegal
+            wildlife trade, or even provide early warning systems for natural
+            calamities such as forest fires or floods that can significantly
+            impact wildlife and their habitats. The aim is to leverage
+            technology to mitigate the effects of such natural disasters and
+            protect wildlife from harm.
+          </div>
+          <div
+            class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
+            id="pills-contact01"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab01"
+          >
+            This track focuses on building software solutions that promote
+            sustainability and protect the environment. Participants might
+            create applications that help reduce waste, conserve energy, monitor
+            the health of ecosystems, or streamline recycling processes. The
+            possibilities are endless, and the goal is to develop innovative
+            solutions that contribute to a cleaner and more sustainable future.
+          </div>
+          <div
+            class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
+            id="pills-04"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab01"
+          >
+            The Gender Inclusivity Track at Status Code 0 focuses on building
+            software solutions that promote gender equality and inclusiveness,
+            addressing various issues affecting women and girls. Participants
+            are encouraged to create applications that combat gender-based
+            violence, improve access to healthcare, and promote equal
+            opportunities for women in the workplace. Furthermore, the track
+            encourages participants to build solutions that support the LGBTQIA+
+            community and non-binary individuals. This includes creating
+            applications that address discrimination, promote equal rights, and
+            provide support for their mental health and overall well-being. The
+            goal is to leverage technology to create a more equitable and
+            inclusive society, free from all forms of discrimination and bias.
+          </div>
+          <div
+            class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
+            id="pills-05"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab01"
+          >
+            The education track encourages participants to build software
+            solutions that enhance the quality of education. Participants might
+            develop applications that provide personalized learning experiences,
+            improve access to education for disadvantaged communities, or help
+            teachers and students collaborate more effectively.
+          </div>
+          <div
+            class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
+            id="pills-06"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab01"
+          >
+            This track focuses on building software solutions that address
+            employment challenges. Participants might create applications that
+            help job seekers find employment, or tools that assist employers in
+            finding the right candidates for their open positions.
+          </div>
+          <div
+            class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
+            id="pills-07"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab01"
+          >
+            The fintech track encourages participants to build software
+            solutions that support financial innovation and inclusion.
+            Participants might develop applications that make financial services
+            more accessible, improve financial literacy, or support financial
+            inclusion for underbanked communities.
+          </div>
+          <div
+            class="hidden bg-[#1E1E1E] w-full text-[#D9D9D9] opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block px-10 py-10 text-2xl"
+            id="pills-08"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab01"
+          >
+            This track focuses on building software solutions that improve
+            cybersecurity. Participants might develop applications that detect
+            and prevent cyber threats, or tools that help organizations protect
+            their data and networks.
           </div>
         </div>
-        <div class="mx-14 mt-20 px-3 py-10 bg-[#555555] xl:hidden">
-          <div id="accordionExample ">
-            <div class="">
-              <h2 class="mb-0" id="headingOne">
-                <button
-                  class="group relative text-center flex w-full items-center justify-center px-5 py-4 bg-white text-[#1B1B1B] transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
-                  type="button"
-                  data-te-collapse-init
-                  data-te-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  MEDICAL
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="!visible"
-                data-te-collapse-item
-                data-te-collapse-show
-                aria-labelledby="headingOne"
-                data-te-parent="#accordionExample"
+      </div>
+      <!-- Accordian mobile-->
+      <div class="bg-[#555555] my-10 px-3 py-10 xl:hidden">
+        <div id="accordionExample ">
+          <div class="">
+            <h2 class="mb-0" id="headingOne">
+              <button
+                class="group relative text-center flex w-full items-center justify-center px-5 py-4 bg-white text-[#1B1B1B] transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+                type="button"
+                data-te-collapse-init
+                data-te-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
               >
-                <div
-                  class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
-                >
-                  In this track, participants work on developing software solutions
-                  related to healthcare and medicine. They might build applications
-                  that help patients manage their health, or tools that assist
-                  healthcare providers in diagnosing and treating patients.
-                </div>
-              </div>
-            </div>
-            <div class="mt-2">
-              <h2 class="mb-0" id="headingTwo">
-                <button
-                  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
-                  type="button"
-                  data-te-collapse-init
-                  data-te-collapse-collapsed
-                  data-te-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  ENVIRONMENT
-                </button>
-              </h2>
-              <div
-                id="collapseTwo"
-                class="!visible hidden"
-                data-te-collapse-item
-                aria-labelledby="headingTwo"
-                data-te-parent="#accordionExample"
-              >
-                <div
-                  class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
-                >
-                  The wildlife track encourages participants to build software
-                  solutions that support wildlife conservation and the preservation
-                  of biodiversity. Participants might develop applications that help
-                  track wildlife populations, monitor habitats, prevent illegal
-                  wildlife trade, or even provide early warning systems for natural
-                  calamities such as forest fires or floods that can significantly
-                  impact wildlife and their habitats. The aim is to leverage
-                  technology to mitigate the effects of such natural disasters and
-                  protect wildlife from harm.
-                </div>
-              </div>
-            </div>
-            <div class="mt-2">
-              <h2 class="accordion-header mb-0" id="headingThree">
-                <button
-                  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
-                  type="button"
-                  data-te-collapse-init
-                  data-te-collapse-collapsed
-                  data-te-target="#collapseThree"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
-                  WILDLIFE
-                </button>
-              </h2>
-              <div
-                id="collapseThree"
-                class="!visible hidden"
-                data-te-collapse-item
-                aria-labelledby="headingFour"
-                data-te-parent="#accordionExample"
-              >
-                <div
-                  class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
-                >
-                  This track focuses on building software solutions that promote
-                  sustainability and protect the environment. Participants might
-                  create applications that help reduce waste, conserve energy,
-                  monitor the health of ecosystems, or streamline recycling
-                  processes. The possibilities are endless, and the goal is to
-                  develop innovative solutions that contribute to a cleaner and more
-                  sustainable future.
-                </div>
-              </div>
-            </div>
-            <div class="mt-2">
-              <h2 class="accordion-header mb-0" id="headingFour">
-                <button
-                  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
-                  type="button"
-                  data-te-collapse-init
-                  data-te-collapse-collapsed
-                  data-te-target="#collapseFour"
-                  aria-expanded="false"
-                  aria-controls="collapseFour"
-                >
-                  INCLUSIVITY
-                </button>
-              </h2>
-              <div
-                id="collapseFour"
-                class="!visible hidden"
-                data-te-collapse-item
-                aria-labelledby="headingFour"
-                data-te-parent="#accordionExample"
-              >
-                <div
-                  class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
-                >
-                  The Gender Inclusivity Track at Status Code 0 focuses on building
-                  software solutions that promote gender equality and inclusiveness,
-                  addressing various issues affecting women and girls. Participants
-                  are encouraged to create applications that combat gender-based
-                  violence, improve access to healthcare, and promote equal
-                  opportunities for women in the workplace. Furthermore, the track
-                  encourages participants to build solutions that support the
-                  LGBTQIA+ community and non-binary individuals. This includes
-                  creating applications that address discrimination, promote equal
-                  rights, and provide support for their mental health and overall
-                  well-being. The goal is to leverage technology to create a more
-                  equitable and inclusive society, free from all forms of
-                  discrimination and bias.
-                </div>
-              </div>
-            </div>
+                MEDICAL
+              </button>
+            </h2>
             <div
-              class="border border-x-0 mt-2 border-t-0 border-neutral-200 bg-white"
+              id="collapseOne"
+              class="!visible"
+              data-te-collapse-item
+              data-te-collapse-show
+              aria-labelledby="headingOne"
+              data-te-parent="#accordionExample"
             >
-              <h2 class="accordion-header mb-0" id="headingFive">
-                <button
-                  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
-                  type="button"
-                  data-te-collapse-init
-                  data-te-collapse-collapsed
-                  data-te-target="#collapseFive"
-                  aria-expanded="false"
-                  aria-controls="collapseFive"
-                >
-                  EDUCATION
-                </button>
-              </h2>
               <div
-                id="collapseFive"
-                class="!visible hidden"
-                data-te-collapse-item
-                aria-labelledby="headingFive"
-                data-te-parent="#accordionExample"
+                class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
               >
-                <div
-                  class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
-                >
-                  The education track encourages participants to build software
-                  solutions that enhance the quality of education. Participants
-                  might develop applications that provide personalized learning
-                  experiences, improve access to education for disadvantaged
-                  communities, or help teachers and students collaborate more
-                  effectively.
-                </div>
+                In this track, participants work on developing software
+                solutions related to healthcare and medicine. They might build
+                applications that help patients manage their health, or tools
+                that assist healthcare providers in diagnosing and treating
+                patients.
               </div>
             </div>
-            <div class="mt-2">
-              <h2 class="accordion-header mb-0" id="headingSix">
-                <button
-                  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
-                  type="button"
-                  data-te-collapse-init
-                  data-te-collapse-collapsed
-                  data-te-target="#collapseSix"
-                  aria-expanded="false"
-                  aria-controls="collapseSix"
-                >
-                  EMPLOYMENT
-                </button>
-              </h2>
-              <div
-                id="collapseSix"
-                class="!visible hidden"
-                data-te-collapse-item
-                aria-labelledby="headingSix"
-                data-te-parent="#accordionExample"
+          </div>
+          <div class="mt-2">
+            <h2 class="mb-0" id="headingTwo">
+              <button
+                class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
               >
-                <div
-                  class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
-                >
-                  This track focuses on building software solutions that address
-                  employment challenges. Participants might create applications that
-                  help job seekers find employment, or tools that assist employers
-                  in finding the right candidates for their open positions.
-                </div>
+                ENVIRONMENT
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingTwo"
+              data-te-parent="#accordionExample"
+            >
+              <div
+                class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
+              >
+                The wildlife track encourages participants to build software
+                solutions that support wildlife conservation and the
+                preservation of biodiversity. Participants might develop
+                applications that help track wildlife populations, monitor
+                habitats, prevent illegal wildlife trade, or even provide early
+                warning systems for natural calamities such as forest fires or
+                floods that can significantly impact wildlife and their
+                habitats. The aim is to leverage technology to mitigate the
+                effects of such natural disasters and protect wildlife from
+                harm.
               </div>
             </div>
-            <div class="mt-2">
-              <h2 class="accordion-header mb-0" id="headingSeven">
-                <button
-                  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
-                  type="button"
-                  data-te-collapse-init
-                  data-te-collapse-collapsed
-                  data-te-target="#collapseSeven"
-                  aria-expanded="false"
-                  aria-controls="collapseSeven"
-                >
-                  FINTECH
-                </button>
-              </h2>
-              <div
-                id="collapseSeven"
-                class="!visible hidden"
-                data-te-collapse-item
-                aria-labelledby="headingSeven"
-                data-te-parent="#accordionExample"
+          </div>
+          <div class="mt-2">
+            <h2 class="accordion-header mb-0" id="headingThree">
+              <button
+                class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
               >
-                <div
-                  class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
-                >
-                  The fintech track encourages participants to build software
-                  solutions that support financial innovation and inclusion.
-                  Participants might develop applications that make financial
-                  services more accessible, improve financial literacy, or support
-                  financial inclusion for underbanked communities.
-                </div>
+                WILDLIFE
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingFour"
+              data-te-parent="#accordionExample"
+            >
+              <div
+                class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
+              >
+                This track focuses on building software solutions that promote
+                sustainability and protect the environment. Participants might
+                create applications that help reduce waste, conserve energy,
+                monitor the health of ecosystems, or streamline recycling
+                processes. The possibilities are endless, and the goal is to
+                develop innovative solutions that contribute to a cleaner and
+                more sustainable future.
               </div>
             </div>
-            <div class="mt-2">
-              <h2 class="accordion-header mb-0" id="headingEight">
-                <button
-                  class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
-                  type="button"
-                  data-te-collapse-init
-                  data-te-collapse-collapsed
-                  data-te-target="#collapseEight"
-                  aria-expanded="false"
-                  aria-controls="collapseEight"
-                >
-                  SECURITY
-                </button>
-              </h2>
-              <div
-                id="collapseEight"
-                class="!visible hidden"
-                data-te-collapse-item
-                aria-labelledby="headingEight"
-                data-te-parent="#accordionExample"
+          </div>
+          <div class="mt-2">
+            <h2 class="accordion-header mb-0" id="headingFour">
+              <button
+                class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
               >
-                <div
-                  class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
-                >
-                  This track focuses on building software solutions that improve
-                  cybersecurity. Participants might develop applications that detect
-                  and prevent cyber threats, or tools that help organizations
-                  protect their data and networks.
-                </div>
+                INCLUSIVITY
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingFour"
+              data-te-parent="#accordionExample"
+            >
+              <div
+                class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
+              >
+                The Gender Inclusivity Track at Status Code 0 focuses on
+                building software solutions that promote gender equality and
+                inclusiveness, addressing various issues affecting women and
+                girls. Participants are encouraged to create applications that
+                combat gender-based violence, improve access to healthcare, and
+                promote equal opportunities for women in the workplace.
+                Furthermore, the track encourages participants to build
+                solutions that support the LGBTQIA+ community and non-binary
+                individuals. This includes creating applications that address
+                discrimination, promote equal rights, and provide support for
+                their mental health and overall well-being. The goal is to
+                leverage technology to create a more equitable and inclusive
+                society, free from all forms of discrimination and bias.
+              </div>
+            </div>
+          </div>
+          <div
+            class="border border-x-0 mt-2 border-t-0 border-neutral-200 bg-white"
+          >
+            <h2 class="accordion-header mb-0" id="headingFive">
+              <button
+                class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                EDUCATION
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingFive"
+              data-te-parent="#accordionExample"
+            >
+              <div
+                class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
+              >
+                The education track encourages participants to build software
+                solutions that enhance the quality of education. Participants
+                might develop applications that provide personalized learning
+                experiences, improve access to education for disadvantaged
+                communities, or help teachers and students collaborate more
+                effectively.
+              </div>
+            </div>
+          </div>
+          <div class="mt-2">
+            <h2 class="accordion-header mb-0" id="headingSix">
+              <button
+                class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseSix"
+                aria-expanded="false"
+                aria-controls="collapseSix"
+              >
+                EMPLOYMENT
+              </button>
+            </h2>
+            <div
+              id="collapseSix"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingSix"
+              data-te-parent="#accordionExample"
+            >
+              <div
+                class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
+              >
+                This track focuses on building software solutions that address
+                employment challenges. Participants might create applications
+                that help job seekers find employment, or tools that assist
+                employers in finding the right candidates for their open
+                positions.
+              </div>
+            </div>
+          </div>
+          <div class="mt-2">
+            <h2 class="accordion-header mb-0" id="headingSeven">
+              <button
+                class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseSeven"
+                aria-expanded="false"
+                aria-controls="collapseSeven"
+              >
+                FINTECH
+              </button>
+            </h2>
+            <div
+              id="collapseSeven"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingSeven"
+              data-te-parent="#accordionExample"
+            >
+              <div
+                class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
+              >
+                The fintech track encourages participants to build software
+                solutions that support financial innovation and inclusion.
+                Participants might develop applications that make financial
+                services more accessible, improve financial literacy, or support
+                financial inclusion for underbanked communities.
+              </div>
+            </div>
+          </div>
+          <div class="mt-2">
+            <h2 class="accordion-header mb-0" id="headingEight">
+              <button
+                class="group relative flex w-full items-center justify-center rounded-none border-0 bg-white px-5 py-4 text-left text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-[#1E1E1E] [&:not([data-te-collapse-collapsed])]:text-[#D9D9D9] font-bold text-4xl"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#collapseEight"
+                aria-expanded="false"
+                aria-controls="collapseEight"
+              >
+                SECURITY
+              </button>
+            </h2>
+            <div
+              id="collapseEight"
+              class="!visible hidden"
+              data-te-collapse-item
+              aria-labelledby="headingEight"
+              data-te-parent="#accordionExample"
+            >
+              <div
+                class="px-10 py-4 text-[#D9D9D9] bg-[#1E1E1E] text-center text-lg"
+              >
+                This track focuses on building software solutions that improve
+                cybersecurity. Participants might develop applications that
+                detect and prevent cyber threats, or tools that help
+                organizations protect their data and networks.
               </div>
             </div>
           </div>
         </div>
-        
+      </div>
+    </div>
 
-
-    <div class="mx-5 md:mx-10 mt-5 md:mt-10">
+    <div id="prize" class="mt-10 mx-5 xl:mx-16">
       <div class="hidden md:justify-center md:items-center">
         <img
           class="h-[8rem] md:h-[20rem]"
           src="../assets/flyingComputer.gif"
           alt="shape pattern"
         />
-
       </div>
-    </div>
-  <div id="prize" class="mx-5 md:mx-10 mt-5 md:mt-10">
-    <div class="hidden md:justify-center md:items-center">
-      <img class="h-[8rem] md:h-[20rem]" src="../assets/flyingComputer.gif" alt="shape pattern" />
-    </div>
-    <div class="prize">
-      <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl">
-        $ vi <span class="text-white">PRIZE</span>.yml
-      </h1>
-      <div class="mt-5">
-        <h1 class="text-3xl text-[#9E9E9E]">
-          > COMING
-
-          <span class="text-[red]">SOON</span>
+      <div class="prize">
+        <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl">
+          $ vi <span class="text-white">PRIZE</span>.yml
         </h1>
-      </div>
+        <div class="mt-5">
+          <h1 class="text-3xl text-[#9E9E9E]">
+            > ANNOUNCEMENT COMING
 
-      <div class="text-white text-[1.4rem] md:text-3xl mt-5 hidden">
-        <h2>
-          &nbsp;1 <span class="text-[#CD3838]">Overall:</span> <br />
-          &nbsp;2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winner:
-          <span class="text-[#CCCC6C]">20000</span><br />
-          &nbsp;3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;runner-up:
-          <span class="text-[#CCCC6C]">10000</span><br />
-          &nbsp;4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second-runner-up:
-          <span class="text-[#CCCC6C]">5000</span><br />
-          &nbsp;5 <br />
-          &nbsp;6 <span class="text-[#CD3838]">Track-1:</span> <br />
-          &nbsp;7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winner:
-          <span class="text-[#CCCC6C]">5000</span><br />
-          &nbsp;8 <br />
-          &nbsp;9 <span class="text-[#CD3838]">Track-2:</span> <br />
-          10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winner:
-          <span class="text-[#CCCC6C]">5000</span>
-        </h2>
+            <span class="text-[red]">SOON</span>
+          </h1>
+        </div>
+
+        <div class="text-white text-[1.4rem] md:text-3xl mt-5 hidden">
+          <h2>
+            &nbsp;1 <span class="text-[#CD3838]">Overall:</span> <br />
+            &nbsp;2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winner:
+            <span class="text-[#CCCC6C]">20000</span><br />
+            &nbsp;3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;runner-up:
+            <span class="text-[#CCCC6C]">10000</span><br />
+            &nbsp;4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second-runner-up:
+            <span class="text-[#CCCC6C]">5000</span><br />
+            &nbsp;5 <br />
+            &nbsp;6 <span class="text-[#CD3838]">Track-1:</span> <br />
+            &nbsp;7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winner:
+            <span class="text-[#CCCC6C]">5000</span><br />
+            &nbsp;8 <br />
+            &nbsp;9 <span class="text-[#CD3838]">Track-2:</span> <br />
+            10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winner:
+            <span class="text-[#CCCC6C]">5000</span>
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Sponsors -->
-  <div id="sponsers" class="sponsors mx-5 md:mx-10 my-10">
-    <div class="headline">
-      <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl">
+
+    <div id="sponsers" class="mt-10 mx-5 xl:mx-16">
+      <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl m-0">
         $ tar -xvzf <span class="text-white"> SPONSORS</span>.tar.gz
       </h1>
-    </div>
-    <div class="mt-5">
-      <h1 class="text-3xl text-[#9E9E9E]">
-        > COMING
-
-        <span class="text-[red]">SOON</span>
-      </h1>
-    </div>
-    <div class="images flex-col gap-5 md:gap-10 mt-5 md:mx-16 hidden">
-      <div class="Platinum">
-        
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ -->
-  <div class="mx-5 md:mx-10 my-10">
-    <div class="mb-10">
-      <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl">
-        $ ./<span class="text-white">RULES && </span>./<span
-          class="text-white"
-          >FAQ</span
+      <div class="border-8 border-[#68ACB0] text-white p-10 mb-16 my-10">
+        <div class="transform -translate-y-14 flex items-center justify-center">
+          <h1
+            class="font-bold text-4xl text-center w-[20rem] bg-[#1E1E1E] tracking-widest text-[#68ACB0] m-0"
+          >
+            PLATINUM
+          </h1>
+        </div>
+        <div
+          class="flex flex-col xl:flex-row items-center gap-10 justify-around"
         >
-      </h1>
-    </div>
-    <div class="bg-[#2E2E2E]">
-      <div class="flex justify-end pt-2 pr-2">
-        <img class="h-3" src="../assets/terminate-icon.svg" />
+          <a href="https://devfolio.co/" class="cursor-pointer">
+            <img src="../assets/Devfolio.svg" alt="DEVFOLIO LOGO" />
+          </a>
+          <a href="https://polygon.technology/" class="cursor-pointer">
+            <img src="../assets/Polygon.svg" alt="POLYGON LOGO" />
+          </a>
+        </div>
       </div>
-
-      <div class="ml-7 mr-3 pt-3 pb-10">
-        <div class="mt-5">
-          <h1 class="text-[#E87D3E] text-3xl xl:text-4xl">> RULES</h1>
-          <ul>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <span class="text-[#169B81]">[1] </span
-                ><button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#169B81]"
-                >
-                  [+]
-                </button>
-                Code of Conduct
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                [1] Eligibility: Only participants who have registered for the
-                hackathon are eligible to participate.<br />
-                [2] Code of Conduct: Participants must adhere to the code of
-                conduct and anti-harassment policy during the event. Any
-                violation of these policies may result in disqualification or
-                expulsion from the event.<br />
-                [3] Original Work: All submissions must be the original work
-                of the participants. Any plagiarism or use of copyrighted
-                material may result in disqualification.<br />
-                [4] Teams: Participants may form teams of up to a certain
-                number of members, usually specified in the rules. Teams may
-                not exceed the specified limit, and participants may not be a
-                member of more than one team.<br />
-                [5] Time Limits: There may be time limits imposed on certain
-                aspects of the event, such as the length of the hackathon or
-                the time allowed for presentations.<br />
-                [6] Judging Criteria: The judging criteria for the hackathon
-                will be specified in the rules, including factors such as
-                creativity, innovation, and technical skill.<br />
-                [7] Prizes: The prizes for the hackathon will be specified in
-                the rules, along with any other relevant information about
-                prize distribution.<br />
-                [8] Disqualification: The organizers reserve the right to
-                disqualify any participant or team at their discretion, for
-                any reason including but not limited to violation of the
-                rules, code of conduct or anti-harassment policy, cheating or
-                unethical behavior.<br />
-                [9] Liability: Participants are responsible for their own
-                actions during the event, and the organizers are not liable
-                for any injury, loss, or damage incurred during the event.
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <span class="text-[#169B81]">[2] </span
-                ><button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#169B81]"
-                >
-                  [+]
-                </button>
-                Guidelines for Hackers
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                [1] Be respectful and courteous to your fellow participants,
-                mentors, and judges.<br />
-                [2] Come prepared to work on a project and be open to
-                collaboration.<br />
-                [3] Be willing to learn new skills and embrace new
-                challenges.<br />
-                [4] Familiarize yourself with the hackathon theme and track
-                that you are participating in.<br />
-                [5] Focus on creating a functional and innovative solution,
-                rather than just finishing quickly.<br />
-                [6] Make sure to document your work and keep it organized
-                throughout the hackathon.<br />
-                [7] Present your solution in a clear and concise manner during
-                the final presentations.<br />
-                [8] Follow the hackathon's code of conduct and anti-harassment
-                policy at all times.<br />
-                [9] Avoid using AI-generated code, such as ChatGPT or Copilot,
-                to ensure that all work is original and created by you or your
-                team.<br />
-                [10] Do not plagiarize or copy existing repositories or
-                projects. While the use of open source resources is allowed,
-                it's important to ensure that all code and ideas are original
-                or properly attributed to their source.<br />
-                [11] Utilize open source tools and resources responsibly and
-                ethically, respecting the licenses and permissions associated
-                with them.
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <span class="text-[#169B81]">[3] </span
-                ><button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#169B81]"
-                >
-                  [+]
-                </button>
-                Guidelines for Mentors
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                [1] Be available to provide guidance and support to the
-                hackers throughout the hackathon.<br />
-                [2] Encourage and motivate the hackers to push their limits
-                and achieve their best.<br />
-                [3] Share your expertise and help the hackers overcome any
-                technical difficulties they may face.<br />
-                [4] Be open to answering questions and providing feedback on
-                the hackers' solutions.<br />
-                [5] Encourage teamwork and collaboration among the hackers.<br />
-                [6] Follow the hackathon's code of conduct and anti-harassment
-                policy at all times.
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <span class="text-[#169B81]">[4] </span
-                ><button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#169B81]"
-                >
-                  [+]
-                </button>
-                Guidelines for Judges
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                [1] Familiarize yourself with the criteria for evaluating the
-                solutions presented by the hackers.<br />
-                [2] Be impartial and fair in your evaluations, taking into
-                account the creativity, functionality, and feasibility of each
-                solution.<br />
-                [3] Be willing to ask questions and provide constructive
-                feedback to the hackers during the final presentations.<br />
-                [4] Evaluate each solution based on its own merit and not the
-                background of the participants.<br />
-                [5] Follow the hackathon's code of conduct and anti-harassment
-                policy at all times.
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <span class="text-[#169B81]">[5] </span
-                ><button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#169B81]"
-                >
-                  [+]
-                </button>
-                Anti-Harassment Policy
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                status_code_0 is committed to providing a safe and inclusive
-                environment for all participants, regardless of gender, age,
-                sexual orientation, disability, physical appearance, body
-                size, race, religion, social class, economic status, or
-                veteran status. The following behaviors are strictly
-                prohibited at all status_code_0 events and in any online
-                interactions related to the event:<br /><br />
-                [1] Offensive verbal or written comments, including but not
-                limited to comments related to the characteristics listed
-                above.<br />
-                [2] Sharing sexual images or other materials.<br />
-                [3] Deliberate intimidation, stalking, following, or
-                brigading.<br />
-                [4] Doxxing, or the publication of personal information
-                without consent.<br />
-                [5] Harassing photography or recording.<br />
-                [6] Sustained disruption of talks or other events.<br />
-                [7] Inappropriate physical contact.<br />
-                [8] Unwelcome sexual attention.<br /><br />
-
-                If you are being subjected to harassment or witness someone
-                else being harassed, we encourage you to report the behavior
-                to a status_code_0 representative. If you are unsure how to
-                report the behavior, or if you need immediate assistance,
-                please reach out to a status_code_0 representative on site.<br /><br />
-
-                status_code_0 takes all reports of harassment seriously and
-                will take appropriate action to address the situation. This
-                may include, but is not limited to, a warning to the offender,
-                or expulsion from the event with no eligibility for
-                reimbursement or refund of any type.<br /><br />
-
-                All participants, including sponsors, judges, mentors,
-                volunteers, organizers, and status_code_0 staff, are subject
-                to this anti-harassment policy.<br /><br />
-
-                By participating in a status_code_0 event, you agree to follow
-                this anti-harassment policy and to make a good-faith effort to
-                maintain a respectful and inclusive environment for all
-                participants.<br /><br />
-
-                Note: This policy is not exhaustive and status_code_0 reserves
-                the right to take any action it deems necessary to ensure a
-                safe and inclusive environment for all participants.
-              </p>
-            </li>
-          </ul>
+      <div class="border-8 border-[#BE9BE5] text-white p-10 mb-16">
+        <div class="transform -translate-y-14 flex items-center justify-center">
+          <h1
+            class="font-bold text-4xl text-center w-[20rem] bg-[#1E1E1E] tracking-widest text-[#BE9BE5] m-0"
+          >
+            GOLD
+          </h1>
         </div>
 
-        <div class="mt-9">
-          <h1 class="text-[#E87D3E] text-3xl xl:text-4xl">> FAQ</h1>
-          <ul>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#E5B567]"
-                >
-                  [+]
-                </button>
-                What is team size to participate ?
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                You can participate individually or in teams of 2 or 3. If you
-                are participating in the hackathon individually and looking
-                for a team, we will help you in connecting to other individual
-                participants to get you a team.
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#E5B567]"
-                >
-                  [+]
-                </button>
-                Will the hackathon be in person or online?
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                The Status Code 0 hackathon will be conducted in complete
-                offline/in person mode.
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#E5B567]"
-                >
-                  [+]
-                </button>
-                How much is participation fees?
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                Participation is absolutely free inclusive of resources.
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#E5B567]"
-                >
-                  [+]
-                </button>
-                What are prerequisites to participate in this hackathon ?
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                No prerequisites are needed. Even a novice can excel in this
-                event.
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#E5B567]"
-                >
-                  [+]
-                </button>
-                How to register?
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                Register your team @ .
-              </p>
-            </li>
-            <li>
-              <h1 class="text-white text-xl sm:text-2xl xl:text-3xl">
-                <button
-                  onclick="Toggle(this)"
-                  class="faq-collapsible text-[#E5B567]"
-                >
-                  [+]
-                </button>
-                What is the venue of Status Code 0 ?
-              </h1>
-              <p
-                class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </li>
-          </ul>
+        <div
+          class="flex flex-col xl:flex-row items-center justify-around gap-10"
+        >
+          <a href="https://solana.com/" class="cursor-pointer">
+            <img src="../assets/Solana.svg" alt="SOLANA LOGO" />
+          </a>
+          <a href="https://filecoin.io/" class="cursor-pointer">
+            <img src="../assets/Filecoin.svg" alt="FILECOIN LOGO" />
+          </a>
+          <a href="https://replit.com/" class="cursor-pointer">
+            <img src="../assets/Replit.svg" alt="REPLIT LOGO" />
+          </a>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <div
-  id="rules"
-  class="bg-[url('/assets/footer.png')] bg-cover h-[65vh] xl:h-[30vh] footer px-5 xl:px-10"
->
-  <div
-    class="flex flex-col justify-center py-20 h-[100%] xl:h-[100%] gap-5"
-  >
-    <div class="flex flex-col xl:flex-row justify-between gap-5">
-      <div class="resources footerelements">
-        <h1 class="footerheading text-2xl md:text-4xl">RESOURCES</h1>
-        <p
-          class="footercontent text-xl md:text-2xl resourcecontent cursor-pointer text-[#9E9E9E]"
-        >
-          Sponsorship Brochure
-        </p>
-      </div>
-      <div class="address footerelements">
-        <h1 class="footerheading text-2xl md:text-4xl md:mt-0">ADDRESS</h1>
-        <p
-          class="footercontent text-xl md:text-2xl addresscontent text-[#9E9E9E]"
-        >
-          APC Ray Lecture Hall Complex, IISER Kolkata
-        </p>
-        <p
-          class="text-xl md:text-2xl addresscontent text-[#9E9E9E] hover:text-white"
-        >
-          <a href="https://goo.gl/maps/PPd7UW3EXEUvu7po7">How to reach the venue?</a>
-        </p>
-      </div>
-      <div class="social">
-        <h1 class="footerheading footerelements text-2xl md:text-4xl">
-          STAY CONNECTED
+    <!-- FAQ -->
+    <div id="faq" class="mt-10 mx-5 xl:mx-16">
+      <div class="mb-10">
+        <h1 class="text-[#9E9E9E] text-2xl md:text-4xl xl:text-5xl m-0">
+          $ ./<span class="text-white">RULES && </span>./<span
+            class="text-white"
+            >FAQ</span
+          >
         </h1>
-        <div class="flex justify-start xl:justify-between gap-7 md:gap-5">
-          <img
-            class="sociallogos insta_logo"
-            src="../assets/images/insta_logo.png"
-            alt="insta_logo"
-          />
-          <img
-            class="twitter_logo sociallogos"
-            src="../assets/images/twitter_logo.png"
-            alt="twitter_logo"
-          />
-          <img
-            class="sociallogos linkedin_logo"
-            src="../assets/images/linkedin_logo.png"
-            alt="linkedin_logo"
-          />
+      </div>
+      <div class="bg-[#2E2E2E]">
+        <div class="flex justify-end pt-2 pr-2">
+          <img class="h-3" src="../assets/terminate-icon.svg" />
+        </div>
+
+        <div class="ml-7 mr-3 pt-3 pb-10">
+          <div class="mt-5">
+            <h1 class="text-[#E87D3E] text-3xl xl:text-4xl m-0">RULES</h1>
+            <ul>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <span class="text-[#169B81]">[1] </span
+                  ><button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#169B81]"
+                  >
+                    [+]
+                  </button>
+                  Code of Conduct
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  [1] Eligibility: Only participants who have registered for the
+                  hackathon are eligible to participate.<br />
+                  [2] Code of Conduct: Participants must adhere to the code of
+                  conduct and anti-harassment policy during the event. Any
+                  violation of these policies may result in disqualification or
+                  expulsion from the event.<br />
+                  [3] Original Work: All submissions must be the original work
+                  of the participants. Any plagiarism or use of copyrighted
+                  material may result in disqualification.<br />
+                  [4] Teams: Participants may form teams of up to a certain
+                  number of members, usually specified in the rules. Teams may
+                  not exceed the specified limit, and participants may not be a
+                  member of more than one team.<br />
+                  [5] Time Limits: There may be time limits imposed on certain
+                  aspects of the event, such as the length of the hackathon or
+                  the time allowed for presentations.<br />
+                  [6] Judging Criteria: The judging criteria for the hackathon
+                  will be specified in the rules, including factors such as
+                  creativity, innovation, and technical skill.<br />
+                  [7] Prizes: The prizes for the hackathon will be specified in
+                  the rules, along with any other relevant information about
+                  prize distribution.<br />
+                  [8] Disqualification: The organizers reserve the right to
+                  disqualify any participant or team at their discretion, for
+                  any reason including but not limited to violation of the
+                  rules, code of conduct or anti-harassment policy, cheating or
+                  unethical behavior.<br />
+                  [9] Liability: Participants are responsible for their own
+                  actions during the event, and the organizers are not liable
+                  for any injury, loss, or damage incurred during the event.
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <span class="text-[#169B81]">[2] </span
+                  ><button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#169B81]"
+                  >
+                    [+]
+                  </button>
+                  Guidelines for Hackers
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  [1] Be respectful and courteous to your fellow participants,
+                  mentors, and judges.<br />
+                  [2] Come prepared to work on a project and be open to
+                  collaboration.<br />
+                  [3] Be willing to learn new skills and embrace new
+                  challenges.<br />
+                  [4] Familiarize yourself with the hackathon theme and track
+                  that you are participating in.<br />
+                  [5] Focus on creating a functional and innovative solution,
+                  rather than just finishing quickly.<br />
+                  [6] Make sure to document your work and keep it organized
+                  throughout the hackathon.<br />
+                  [7] Present your solution in a clear and concise manner during
+                  the final presentations.<br />
+                  [8] Follow the hackathon's code of conduct and anti-harassment
+                  policy at all times.<br />
+                  [9] Avoid using AI-generated code, such as ChatGPT or Copilot,
+                  to ensure that all work is original and created by you or your
+                  team.<br />
+                  [10] Do not plagiarize or copy existing repositories or
+                  projects. While the use of open source resources is allowed,
+                  it's important to ensure that all code and ideas are original
+                  or properly attributed to their source.<br />
+                  [11] Utilize open source tools and resources responsibly and
+                  ethically, respecting the licenses and permissions associated
+                  with them.
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <span class="text-[#169B81]">[3] </span
+                  ><button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#169B81]"
+                  >
+                    [+]
+                  </button>
+                  Guidelines for Mentors
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  [1] Be available to provide guidance and support to the
+                  hackers throughout the hackathon.<br />
+                  [2] Encourage and motivate the hackers to push their limits
+                  and achieve their best.<br />
+                  [3] Share your expertise and help the hackers overcome any
+                  technical difficulties they may face.<br />
+                  [4] Be open to answering questions and providing feedback on
+                  the hackers' solutions.<br />
+                  [5] Encourage teamwork and collaboration among the hackers.<br />
+                  [6] Follow the hackathon's code of conduct and anti-harassment
+                  policy at all times.
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <span class="text-[#169B81]">[4] </span
+                  ><button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#169B81]"
+                  >
+                    [+]
+                  </button>
+                  Guidelines for Judges
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  [1] Familiarize yourself with the criteria for evaluating the
+                  solutions presented by the hackers.<br />
+                  [2] Be impartial and fair in your evaluations, taking into
+                  account the creativity, functionality, and feasibility of each
+                  solution.<br />
+                  [3] Be willing to ask questions and provide constructive
+                  feedback to the hackers during the final presentations.<br />
+                  [4] Evaluate each solution based on its own merit and not the
+                  background of the participants.<br />
+                  [5] Follow the hackathon's code of conduct and anti-harassment
+                  policy at all times.
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <span class="text-[#169B81]">[5] </span
+                  ><button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#169B81]"
+                  >
+                    [+]
+                  </button>
+                  Anti-Harassment Policy
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  status_code_0 is committed to providing a safe and inclusive
+                  environment for all participants, regardless of gender, age,
+                  sexual orientation, disability, physical appearance, body
+                  size, race, religion, social class, economic status, or
+                  veteran status. The following behaviors are strictly
+                  prohibited at all status_code_0 events and in any online
+                  interactions related to the event:<br /><br />
+                  [1] Offensive verbal or written comments, including but not
+                  limited to comments related to the characteristics listed
+                  above.<br />
+                  [2] Sharing sexual images or other materials.<br />
+                  [3] Deliberate intimidation, stalking, following, or
+                  brigading.<br />
+                  [4] Doxxing, or the publication of personal information
+                  without consent.<br />
+                  [5] Harassing photography or recording.<br />
+                  [6] Sustained disruption of talks or other events.<br />
+                  [7] Inappropriate physical contact.<br />
+                  [8] Unwelcome sexual attention.<br /><br />
+
+                  If you are being subjected to harassment or witness someone
+                  else being harassed, we encourage you to report the behavior
+                  to a status_code_0 representative. If you are unsure how to
+                  report the behavior, or if you need immediate assistance,
+                  please reach out to a status_code_0 representative on site.<br /><br />
+
+                  status_code_0 takes all reports of harassment seriously and
+                  will take appropriate action to address the situation. This
+                  may include, but is not limited to, a warning to the offender,
+                  or expulsion from the event with no eligibility for
+                  reimbursement or refund of any type.<br /><br />
+
+                  All participants, including sponsors, judges, mentors,
+                  volunteers, organizers, and status_code_0 staff, are subject
+                  to this anti-harassment policy.<br /><br />
+
+                  By participating in a status_code_0 event, you agree to follow
+                  this anti-harassment policy and to make a good-faith effort to
+                  maintain a respectful and inclusive environment for all
+                  participants.<br /><br />
+
+                  Note: This policy is not exhaustive and status_code_0 reserves
+                  the right to take any action it deems necessary to ensure a
+                  safe and inclusive environment for all participants.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-9">
+            <h1 class="text-[#E87D3E] text-3xl xl:text-4xl">> FAQ</h1>
+            <ul>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#E5B567]"
+                  >
+                    [+]
+                  </button>
+                  What is team size to participate ?
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  You can participate individually or in teams of 2 or 3. If you
+                  are participating in the hackathon individually and looking
+                  for a team, we will help you in connecting to other individual
+                  participants to get you a team.
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#E5B567]"
+                  >
+                    [+]
+                  </button>
+                  Will the hackathon be in person or online?
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  The Status Code 0 hackathon will be conducted in complete
+                  offline/in person mode.
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#E5B567]"
+                  >
+                    [+]
+                  </button>
+                  How much is participation fees?
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  Participation is absolutely free inclusive of resources.
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#E5B567]"
+                  >
+                    [+]
+                  </button>
+                  What are prerequisites to participate in this hackathon ?
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  No prerequisites are needed. Even a novice can excel in this
+                  event.
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#E5B567]"
+                  >
+                    [+]
+                  </button>
+                  How to register?
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  Register your team @ .
+                </p>
+              </li>
+              <li>
+                <h1 class="text-white text-xl sm:text-2xl xl:text-3xl m-0">
+                  <button
+                    onclick="Toggle(this)"
+                    class="faq-collapsible text-[#E5B567]"
+                  >
+                    [+]
+                  </button>
+                  What is the venue of Status Code 0 ?
+                </h1>
+                <p
+                  class="example text-[#D6D6D6] text-xl sm:text-2xl xl:text-3xl pl-12"
+                >
+                  IISER KOLKATA
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
     <div
-      class="copyright flex items-center justify-center text-xl xl:text-2xl mx-5"
+      id="rules"
+      class="bg-[url('/assets/footer.png')] bg-cover h-[65vh] xl:h-[30vh] footer mt-10 px-5 xl:px-16"
     >
-      <h1>© 2023 Tech Club IIIT Kalyani</h1>
+      <div
+        class="flex flex-col justify-center py-20 h-[100%] xl:h-[100%] gap-5"
+      >
+        <div class="flex flex-col xl:flex-row justify-between gap-5">
+          <div class="resources footerelements">
+            <h1 class="footerheading text-2xl md:text-4xl m-0">RESOURCES</h1>
+            <a
+              href="https://drive.google.com/file/d/1JKW9P9Kez_VF_kc4D9bF8mpgT7oi7iBT/view?pli=1"
+              class="footercontent text-xl md:text-2xl resourcecontent cursor-pointer text-[#9E9E9E]"
+            >
+              Sponsorship Brochure
+            </a>
+          </div>
+          <div class="address footerelements">
+            <h1 class="footerheading text-2xl md:text-4xl md:mt-0 m-0">
+              ADDRESS
+            </h1>
+            <p
+              class="footercontent text-xl md:text-2xl addresscontent text-[#9E9E9E]"
+            >
+              APC Ray Lecture Hall Complex, IISER Kolkata
+            </p>
+            <p
+              class="text-xl md:text-2xl addresscontent text-[#9E9E9E] hover:text-white"
+            >
+              <a href="https://goo.gl/maps/PPd7UW3EXEUvu7po7"
+                >How to reach the venue?</a
+              >
+            </p>
+          </div>
+          <div class="social">
+            <h1
+              class="footerheading footerelements text-2xl md:text-4xl m-0 mb-5"
+            >
+              STAY CONNECTED
+            </h1>
+            <div class="flex justify-start xl:justify-between gap-7 md:gap-5">
+              <a href="https://www.instagram.com/tc_iiitkalyani/">
+                <img
+                  class="sociallogos insta_logo"
+                  src="../assets/images/insta_logo.png"
+                  alt="insta_logo"
+                />
+              </a>
+              <a href="https://twitter.com/tc_IIITkalyani">
+                <img
+                  class="twitter_logo sociallogos"
+                  src="../assets/images/twitter_logo.png"
+                  alt="twitter_logo"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/technology-gymkhana-iiit-kalyani-a28035262"
+              >
+                <img
+                  class="sociallogos linkedin_logo"
+                  src="../assets/images/linkedin_logo.png"
+                  alt="linkedin_logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright flex items-center justify-center mx-5">
+          <h1 class="m-0 text-xl xl:text-2xl">© 2023 Tech Club IIIT Kalyani</h1>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-  <script src="./index.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.typetype.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
-  <script>
-  </script>
-</body>
-
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="/dist/index.js"></script>
+  </body>
 </html>

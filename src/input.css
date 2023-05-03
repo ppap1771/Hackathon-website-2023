@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* * { 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -12,24 +13,3 @@ body {
   color: #FFFFFF;
 }
 
-*, html {
-  scroll-behavior: smooth !important;
-}
-
-/* preloader gif */
-#preloader {
-  background: #1E1E1E url("../assets/start.gif") no-repeat center center;
-  height: 100vh;
-  background-size: 15%;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-}
-
-#loadingText{
-  position:fixed;
-  font-size: 3rem;
-  top: 70%;
-  width: 100%;
-  text-align: center;
-}

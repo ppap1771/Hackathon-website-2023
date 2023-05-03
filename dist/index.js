@@ -1,10 +1,3 @@
-//toggle start
-const collection = document.getElementsByClassName("example");
-for (let i = 0; i < collection.length; i++) {
-  collection[i].setAttribute("hidden", "hidden")
-}
-// collapsibles.setAttribute("hidden", "hidden")
-
 function Menu(e) {
   let list = document.querySelector("ul");
   e.name === "menu"
@@ -15,11 +8,12 @@ function Menu(e) {
       list.classList.remove("top-[80px]"),
       list.classList.remove("opacity-100"));
 }
+//toggle end
 
+// Faq toggle 
 function Toggle(e) {
   let element = e.parentElement.nextElementSibling;
   let hidden = element.getAttribute("hidden");
-  console.log(element)
 
   if (hidden) {
     element.removeAttribute("hidden");
@@ -30,10 +24,15 @@ function Toggle(e) {
   }
 }
 
-//toggle end
+const collection = document.getElementsByClassName("example");
+for (let i = 0; i < collection.length; i++) {
+  collection[i].setAttribute("hidden", "hidden");
+}
 
+// Faq toggle end
 
-const loader = document.getElementById("preloader");
+//Todo configure when date is reached
+// https://codepen.io/AllThingsSmitty/pen/JJavZN
 
 (function () {
   const second = 1000,
@@ -48,7 +47,7 @@ const loader = document.getElementById("preloader");
     mm = String(today.getMonth() + 1).padStart(2, "0"),
     yyyy = today.getFullYear(),
     nextYear = yyyy,
-    dayMonth = "05/06/",
+    dayMonth = "08/12/",
     birthday = dayMonth + yyyy;
 
   today = mm + "/" + dd + "/" + yyyy;
@@ -58,28 +57,36 @@ const loader = document.getElementById("preloader");
   //end
 
   const countDown = new Date(birthday).getTime(),
-  
-      x = setInterval(function() {    
+    x = setInterval(function () {
+      const now = new Date().getTime(),
+        distance = countDown - now;
 
-        const now = new Date().getTime(),
-              distance = countDown - now;
+      // modified lines to print 2 digits with 0 appended at the start
+      document.getElementById("days").innerText = String(
+        Math.floor(distance / day)
+      ).padStart(2, "0");
+      document.getElementById("hours").innerText = String(
+        Math.floor((distance % day) / hour)
+      ).padStart(2, "0");
+      document.getElementById("minutes").innerText = String(
+        Math.floor((distance % hour) / minute)
+      ).padStart(2, "0");
+      document.getElementById("seconds").innerText = String(
+        Math.floor((distance % minute) / second)
+      ).padStart(2, "0");
 
-        // modified lines to print 2 digits with 0 appended at the start
-        document.getElementById("days").innerText = String(Math.floor(distance / (day))).padStart(2, "0");
-        document.getElementById("hours").innerText = String(Math.floor((distance % (day)) / (hour))).padStart(2, "0");
-        document.getElementById("minutes").innerText = String(Math.floor((distance % (hour)) / (minute))).padStart(2, "0");
-        document.getElementById("seconds").innerText = String(Math.floor((distance % (minute)) / second)).padStart(2, "0");
+      //do something later when date is reached
+      if (distance < 0) {
+        document.getElementById("headline").innerText = "It's my birthday!";
+        document.getElementById("countdown").style.display = "none";
+        document.getElementById("content").style.display = "block";
+        clearInterval(x);
+      }
+      //seconds
+    }, 0);
+})();
 
-        //do something later when date is reached
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "Status Code 0 Is Onnnn!";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
-        }
-        //seconds
-      }, 0)
-  }());
+//typeit animation
 
 //status_code_0 animation
 new TypeIt("#element", { 
@@ -133,25 +140,26 @@ new TypeIt("#element", {
 .type("0")
 .go();
 
-//blinking animation
-const blinkingAnimation=()=>{
-  new TypeIt("#blinking", { 
-    lifeLike: false, 
-    speed: 0 
-  })
-  .type(".")
-  .pause(435)
-  .type(".")
-  .pause(441)
-  .type(".")
-  .pause(438)
-  .go();
-}
-blinkingAnimation();
 //preloader
-
+const loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   loader.style.display = "none";
 });
 
-//toggle div
+
+
+//devfolio
+
+// create a script element
+const script = document.createElement('script');
+script.src = 'https://apply.devfolio.co/v2/sdk.js';
+script.async = true;
+script.defer = true;
+
+// add the script to the body of the document
+document.body.appendChild(script);
+
+// remove the script from the body of the document on unmount
+window.addEventListener('beforeunload', () => {
+  document.body.removeChild(script);
+});
